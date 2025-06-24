@@ -1,0 +1,24 @@
+[user]
+	name = Andrew T
+	email = atenni@users.noreply.github.com
+
+[core]
+     autocrlf = input
+     excludesfile = /Users/tenni/.config/git/ignore
+
+[init]
+     defaultBranch = main
+
+[branch]
+	autosetuprebase = always
+
+[pull]
+	rebase = true
+
+# Added via `git lfs install`
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
