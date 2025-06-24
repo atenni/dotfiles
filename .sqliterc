@@ -1,0 +1,5 @@
+-- Enable column headers in query results
+.headers on
+
+-- Set output mode to Markdown table format
+.mode markdown
