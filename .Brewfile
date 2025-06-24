@@ -41,7 +41,7 @@ brew "tmux"
 brew "tree"
 
 # Download YouTube videos from the command-line
-brew "youtube-dl"
+brew "yt-dlp"
 
 # General-purpose data compression with high compression ratio
 brew "xz"
