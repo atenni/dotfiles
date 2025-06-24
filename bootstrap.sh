@@ -32,6 +32,15 @@ link_dotfiles() {
     ln -s "$(pwd)/$file" "$HOME/$file"
     echo "› Linked $file to home directory"
   done
+
+  # Special case for .config/git/ignore
+  mkdir -p "$HOME/.config/git"
+  if [[ ! -e "$HOME/.config/git/ignore" ]]; then
+    ln -s "$(pwd)/.config/git/ignore" "$HOME/.config/git/ignore"
+    echo "› Linked .config/git/ignore to $HOME/.config/git/ignore"
+  else
+    echo "› Skipping .config/git/ignore, already exists in home directory"
+  fi
 }
 
 install_homebrew() {
