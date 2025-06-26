@@ -78,10 +78,24 @@ install_homebrew_apps() {
     echo "› Upgrading all applications in Brewfile..."
     echo "› running: brew bundle --file=\"$HOME/.Brewfile\""
     brew bundle --file="$HOME/.Brewfile"
+
+    if [[ -f "$HOME/.Brewfile.local" ]]; then
+      echo "› Upgrading local applications in Brewfile.local..."
+      echo "› running: brew bundle --file=\"$HOME/.Brewfile.local\""
+      brew bundle --file="$HOME/.Brewfile.local"
+    fi
+
   else
     echo "› Installing missing applications from Brewfile (no upgrade)..."
     echo "› running: brew bundle --no-upgrade --file=\"$HOME/.Brewfile\""
     brew bundle --no-upgrade --file="$HOME/.Brewfile"
+
+    if [[ -f "$HOME/.Brewfile.local" ]]; then
+      echo "› Installing missing local applications from Brewfile.local (no upgrade)..."
+      echo "› running: brew bundle --no-upgrade --file=\"$HOME/.Brewfile.local\""
+      brew bundle --no-upgrade --file="$HOME/.Brewfile.local"
+    fi
+
   fi
 }
 

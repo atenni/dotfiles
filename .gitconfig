@@ -4,7 +4,7 @@
 
 [core]
      autocrlf = input
-     excludesfile = $HOME/.config/git/ignore
+     excludesfile = ~/.config/git/ignore
 
 [init]
      defaultBranch = main
@@ -22,3 +22,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 
+[include]
+	path = ~/.gitconfig.local
