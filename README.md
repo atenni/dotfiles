@@ -33,3 +33,22 @@ To _upgrade_ already installed applications, pass the `--upgrade` flag:
 ```bash
 ./bootstrap.sh --upgrade
 ```
+
+## Local Overrides
+
+This dotfiles repo supports local overrides for machine-specific configurations.
+Create `.local` or `.local.sh` files alongside their main counterparts to add
+custom settings specific to this machine. Local configurations will extend or
+override their corresponding common files.
+
+```
+dotfiles/
+├── .gitconfig              # Common git config
+├── .gitconfig.local        # Local git overrides (gitignored)
+└── exports/
+    ├── exports.sh          # Common exports
+    └── exports.local.sh    # Local exports (gitignored)
+```
+
+Local files are automatically sourced/included where supported and are
+gitignored by default.
