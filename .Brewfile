@@ -47,9 +47,6 @@ brew "tmux"
 # Display directories as trees (with optional colour/HTML output)
 brew "tree"
 
-# Download YouTube videos from the command-line
-brew "yt-dlp"
-
 # General-purpose data compression with high compression ratio
 brew "xz"
 
