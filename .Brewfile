@@ -1,3 +1,6 @@
+# Install applications (casks) in the macOS /Applications directory
+cask_args appdir: '/Applications'
+
 tap "aws/tap"
 
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
@@ -47,3 +50,15 @@ brew "xz"
 
 # General-purpose lossless data-compression library
 brew "zlib"
+
+# ------------
+# Applications
+# ------------
+
+# cask "1password"
+# cask "datagrip"
+# cask "firefox"
+# cask "google-chrome"
+cask "raycast"
+cask "slack"
+# cask "visual-studio-code"
