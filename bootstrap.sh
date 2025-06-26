@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
-#
+
 # This script is idempotent and can be run multiple times without issues:
 #
-# - If a dot file already exists it won't be symlinked.
-# - If an application is already installed it will skip that step.
+# - If a dot file doesn't exist it will be symlinked to the home directory
+# - If a dot file already exists it will skip that step
 #
-# Alternatively pass in the `--upgrade` flag to update existing applications.
+# - If an application doesn't exist it will be installed
+# - If an application is already installed it will skip that step
+#
+# Alternatively pass in the `--upgrade` flag to upgrade all existing applications:
+#
+#   `./bootstrap.sh --upgrade`
 
 set -euo pipefail
 
 ####################
-# DEFINE FUNCTIONS #
+# DEFINE FUNCTIONS #  (see the bottom of this file for execution order)
 ####################
 
 # Symlink all files/folders starting with `.` to the home directory.
