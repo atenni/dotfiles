@@ -36,10 +36,15 @@ brew "readline"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 
+# Command-line interface for SQLite
+# Note: need to update path to use this over native macOS SQLite
+#   export PATH="$(brew --prefix sqlite)/bin:$PATH"
+brew "sqlite"
+
 # Terminal multiplexer
 brew "tmux"
 
-# Display directories as trees (with optional color/HTML output)
+# Display directories as trees (with optional colour/HTML output)
 brew "tree"
 
 # Download YouTube videos from the command-line
