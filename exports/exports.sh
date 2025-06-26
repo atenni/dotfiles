@@ -35,20 +35,13 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-# --------------- #
-# SQLITE SETTINGS #
-# --------------- #
-# Prefer Homebrew's SQLite over the system one, if available
-if command -v brew &>/dev/null; then
-  sqlite_prefix="$(brew --prefix sqlite 2>/dev/null || true)"
-  if [ -n "$sqlite_prefix" ] && [ -d "$sqlite_prefix/bin" ]; then
-    export PATH="$sqlite_prefix/bin:$PATH"
-  fi
-fi
 
 
-# ------------------------------------ #
-# Local overrides (not tracked in git) #
-# ------------------------------------ #
-# shellcheck disable=SC1091
-[[ -e "${BASH_SOURCE%/*}/exports.local.sh" ]] && source "${BASH_SOURCE%/*}/exports.local.sh"
+# -------- #
+# HOMEBREW #
+# -------- #
+export HOMEBREW_NO_ANALYTICS=1
+
+
+
+
