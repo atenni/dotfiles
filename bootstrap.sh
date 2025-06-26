@@ -55,7 +55,7 @@ install_homebrew() {
   echo "----------------------------------"
   # Check if Homebrew is installed
   if ! command -v brew &>/dev/null; then
-    read -p "› Homebrew not found. Would you like to install it now? [y/N]: " reply
+    read -rp "› Homebrew not found. Would you like to install it now? [y/N]: " reply
     if [[ "$reply" =~ ^[Yy]$ ]]; then
       echo "› Installing Homebrew..."
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
