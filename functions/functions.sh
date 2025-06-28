@@ -5,9 +5,9 @@
 # - Window 1: llm 
 # - Window 2: zsh
 tmux-work() {
-  tmux has-session -t work 2>/dev/null
-  if [ $? -eq 0 ]; then
-    tmux attach -t work
+  # Check if tmux server is running and if the 'work' session exists
+  if tmux has-session -t work 2>/dev/null; then
+    tmux attach-session -t work
     return
   fi
 
