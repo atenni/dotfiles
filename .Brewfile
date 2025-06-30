@@ -47,11 +47,6 @@ brew "tmux"
 # Display directories as trees (with optional colour/HTML output)
 brew "tree"
 
-# General-purpose data compression with high compression ratio
-brew "xz"
-
-# General-purpose lossless data-compression library
-brew "zlib"
 
 # ------------
 # Applications
