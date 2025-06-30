@@ -1,10 +1,20 @@
 # Secrets
 *.env
 
+# Scratch files
+tmp/
+
+# LLM codegen
+# See: https://github.com/atenni/llm-codegen-templates
+llm/
+
 # Python
 .venv/
 __pychche__/
 *.pyc
+
+# Javascript/Typescript
+node_modules/
 
 # General
 .DS_Store
@@ -35,5 +45,12 @@ Temporary Items
 .apdisk
 
 # IDEs
+# Note: sometime we want these included, in which case you can override them
+#       in the local repo - ie. `!.vscode/`
+# Docs: https://git-scm.com/docs/gitignore#_pattern_format
 .vscode/
 .idea/
+
+# ASDF
+.tool-versions
+
