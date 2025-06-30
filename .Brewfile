@@ -18,6 +18,9 @@ brew "coreutils"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 
+# Distributed revision control system
+brew "git"
+
 # Git extension for versioning large files
 brew "git-lfs"
 
