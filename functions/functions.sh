@@ -19,8 +19,8 @@ tmux-work() {
   tmux send-keys -t work:0 "git pull" C-m
   # shellcheck disable=SC2154  # $todos is defined in ./exports/exports.local.sh
   tmux send-keys -t work:0 "vim \"$todos\"" C-m
-  tmux new-window -t work:1 -n LLM
-  tmux new-window -t work:2 -n ZSH
+  tmux new-window -t work:1 -n llm
+  tmux new-window -t work:2 -n zsh
   tmux select-window -t work:0
   tmux attach-session -t work
 }
