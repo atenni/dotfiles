@@ -8,6 +8,7 @@
 # (Override in "./exports.local.sh" as needed)
 export CODE_DIR=${CODE_DIR:-$HOME/code}
 
+
 # ---------- #
 # XDG CONFIG #
 # ---------- #
@@ -19,14 +20,6 @@ export XDG_STATE_HOME=${XDG_STATE_HOME:-$HOME/.local/state}
 export XDG_BIN_HOME=${XDG_BIN_HOME:-$HOME/.local/bin}
 # XDG_RUNTIME_DIR – 2025-06-26: I'm gonna skip this one on macOS for now
 
-# Ensure Zsh directories exist.
-for zdir in \
-  "$XDG_CONFIG_HOME" \
-  "$XDG_CACHE_HOME" \
-  "$XDG_DATA_HOME" \
-  "$XDG_STATE_HOME"; do
-  [ -d "$zdir" ] || mkdir -p -- "$zdir"
-done
 
 # --------------- #
 # LOCALE SETTINGS #
@@ -36,12 +29,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 
-
 # -------- #
 # HOMEBREW #
 # -------- #
 export HOMEBREW_NO_ANALYTICS=1
-
-
-
-
