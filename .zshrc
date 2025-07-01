@@ -48,7 +48,7 @@ eval "$(ssh-agent -s)" > /dev/null
 # ZSH: PURE PROMPT #
 # ---------------- #
 # Manually installed as per: https://github.com/sindresorhus/pure
-fpath+=($HOME/.zsh/pure)
+fpath+=($CODE_DIR/.zsh/pure)
 
 autoload -U promptinit; promptinit
 prompt pure
