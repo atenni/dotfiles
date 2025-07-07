@@ -33,3 +33,8 @@ if command -v brew &>/dev/null; then
     export PATH="$sqlite_prefix/bin:$PATH"
   fi
 fi
+
+# -----------#
+# XDG CONFIG #
+# -----------#
+export PATH="$XDG_BIN_HOME:$PATH"
