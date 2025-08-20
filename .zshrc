@@ -54,6 +54,12 @@ autoload -U promptinit; promptinit
 prompt pure
 
 
+# ZSH: ENABLE AUTOCOMPLETE #
+# ----------------------- #
+autoload -Uz compinit
+compinit
+
+
 # ------------------------ #
 # FINISH WITH PATH UPDATES #
 # ------------------------ #
