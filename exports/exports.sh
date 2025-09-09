@@ -33,3 +33,11 @@ export LANGUAGE=en_US.UTF-8
 # HOMEBREW #
 # -------- #
 export HOMEBREW_NO_ANALYTICS=1
+
+
+# --- #
+# CDK #
+# --- #
+# Disable automatic CDK telemetry: https://github.com/aws/aws-cdk/issues/34892
+export CDK_DISABLE_CLI_TELEMETRY=true
+
